@@ -98,3 +98,21 @@
   background-image: url('../images/spiderman-tobey/movie-03/background.png');
   background-size: cover;
 }
+
+/* Container das imagens de cada Aranha */
+.s-movies-gallery {
+  display: flex;           /* Coloca imagens lado a lado */
+  flex-direction: row;     /* Horizontal */
+  justify-content: flex-start;
+  gap: 15px;               /* Espaço entre as imagens */
+  margin-top: 20px;        /* Espaço entre o texto e as imagens */
+  flex-wrap: wrap;          /* Se a tela for pequena, quebra linha */
+}
+
+/* Cada imagem individual */
+.s-movies-gallery img {
+  width: 200px;            /* Ajuste conforme necessário */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
