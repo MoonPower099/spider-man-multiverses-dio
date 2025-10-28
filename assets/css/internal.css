@@ -15,6 +15,7 @@
 .s-wrapper video{
   position: fixed;
   width: 100%;
+
 }
 
 .s-wrapper .s-left-column {
@@ -38,11 +39,10 @@
 }
 
 .s-wrapper .s-main-content__top {
-  height: auto; /* altura automática para caber texto + imagens */
+  height: 80vh;
   display: flex;
-  flex-direction: column; /* texto em cima, imagens embaixo */
+  flex-direction: column;
   justify-content: flex-start;
-  gap: 20px; /* espaço entre texto e imagens */
 }
 
 .s-wrapper .s-main-content__bottom{
@@ -63,7 +63,6 @@
   max-width: 50%;
   padding: 20px;
   border-radius: 10px;
-  z-index: 2;
 }
 
 .s-wrapper .s-main-content__top .s-description .s-description__text p{
@@ -85,22 +84,18 @@
   flex-direction: row;
 }
 
-/* GALERIA DE IMAGENS DE FILMES - todas as versões */
-.s-wrapper .s-main-content__top .s-spiderman-01-01,
-.s-wrapper .s-main-content__top .s-spiderman-01-02,
-.s-wrapper .s-main-content__top .s-spiderman-01-03,
-.s-wrapper .s-main-content__top .s-spiderman-02-01,
-.s-wrapper .s-main-content__top .s-spiderman-02-02,
-.s-wrapper .s-main-content__top .s-spiderman-03-01,
-.s-wrapper .s-main-content__top .s-spiderman-03-02,
-.s-wrapper .s-main-content__top .s-spiderman-03-03 {
-  display: inline-block;       /* lado a lado */
-  width: 200px;                /* ajuste do tamanho */
-  height: auto;
-  margin-right: 15px;          /* espaço entre imagens */
-  margin-top: 15px;            /* espaço entre texto e imagens */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  vertical-align: top;
+.s-spiderman-01-01 {
+  background-image: url('../images/spiderman-tobey/movie-01/background.png');
+  background-size:cover;
+}
+
+.s-spiderman-01-02 {
+  background-image: url('../images/spiderman-tobey/movie-02/background.png');
   background-size: cover;
 }
+
+.s-spiderman-01-03 {
+  background-image: url('../images/spiderman-tobey/movie-03/background.png');
+  background-size: cover;
+}
+
