@@ -41,14 +41,14 @@
 .s-wrapper .s-main-content__top {
   height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
 .s-wrapper .s-main-content__bottom{
   height: 20vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
