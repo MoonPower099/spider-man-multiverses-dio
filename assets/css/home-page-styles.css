@@ -47,6 +47,7 @@ body::before {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  perspective: 1000px; /* perspectiva para efeito 3D */
 }
 
 .s-card {
@@ -54,7 +55,9 @@ body::before {
   width: calc(100% / 3 - 8%);
   height: 70vh;
   position: relative;
-  transition: background-color 1s ease-in-out, filter .5s ease-in-out;
+  transition: background-color 1s ease-in-out, filter .5s ease-in-out, transform 0.6s ease-in-out, z-index 0.6s ease-in-out;
+  transform-style: preserve-3d; /* necessário para 3D */
+  cursor: pointer;
 }
 
 .s-card__background {
@@ -148,7 +151,6 @@ body::before {
 }
 
 /* Card hover animation */
-
 .s-card--hovered .s-card__background {
   cursor: pointer;
   opacity: 0;
@@ -181,4 +183,28 @@ body[id^="spider-man-"]::before {
 
 body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
   filter: grayscale(100%);
+}
+
+/* --- EFEITO CARROSSEL 3D --- */
+.s-card--active {
+  transform: rotateY(0deg) scale(1.1);
+  z-index: 2;
+}
+
+.s-card--left {
+  transform: rotateY(-40deg) translateX(-50px);
+  z-index: 1;
+  filter: grayscale(50%);
+}
+
+.s-card--right {
+  transform: rotateY(40deg) translateX(50px);
+  z-index: 1;
+  filter: grayscale(50%);
+}
+
+/* Mantém efeito hover mesmo com carrossel */
+.s-card--hovered {
+  transform: scale(1.2) !important;
+  filter: none !important;
 }
