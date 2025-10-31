@@ -1,31 +1,41 @@
 @import url('reset.css');
 @import url('global.css');
-
-@import url('components/_gallery.css');
+@import url('components/_navigator.css');
 @import url('components/_pills.css');
 @import url('components/_link-button.css');
-@import url('components/_navigator.css');
+@import url('components/_gallery.css');
 
 .s-wrapper {
   display: flex;
   height: 100vh;
-  flex-flow: row nowrap;   
+  flex-flow: row nowrap; 
+  background-color: aqua; 
+}
+
+.s-wrapper video{
+  position: fixed;
+  width: 100%;
+
 }
 
 .s-wrapper .s-left-column {
   width: 100px;
   height: 100%;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  padding-right: 50px;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .s-wrapper .s-main-content{
   height: 100%;
   width: 100%;
-  background-color: gray;
-  padding-left: 30px;
+  padding-left: 130px;
+  position: relative;
 }
 
 .s-wrapper .s-main-content__top {
@@ -74,7 +84,6 @@
   flex-direction: row;
 }
 
-
 .s-spiderman-01-01 {
   background-image: url('../images/spiderman-tobey/movie-01/background.png');
   background-size:cover;
@@ -89,47 +98,3 @@
   background-image: url('../images/spiderman-tobey/movie-03/background.png');
   background-size: cover;
 }
-
-.s-spiderman-02-01 {
-  background-image: url('../images/spiderman-andrew/movie-01/background.png');
-  background-size: cover;
-}
-
-.s-spiderman-02-02 {
-  background-image: url('../images/spiderman-andrew/movie-02/background.png');
-  background-size: cover;
-}
-
-.s-spiderman-03-01 {
-  background-image: url('../images/spiderman-tom/movie-01/background.png');
-  background-size: cover;
-}
-.s-spiderman-03-02 {
-  background-image: url('../images/spiderman-tom/movie-02/background.png');
-  background-size: cover;
-}
-.s-spiderman-03-03 {
-  background-image: url('../images/spiderman-tom/movie-03/background.png');
-  background-size: cover;
-}
-
-
-
-.preview {
-  position: absolute;
-  width: 90vw;
-  height: 90vh;
-  object-fit: cover;
-  top: 5%;
-  left: 6vw;
-}
-
-.preview::before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: red;
-} 
